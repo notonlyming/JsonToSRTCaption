@@ -1,0 +1,2 @@
+# JsonToSRTCaption
+将Json格式字幕转换为中文srt格式字幕
