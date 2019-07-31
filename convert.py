@@ -65,12 +65,11 @@ def ParseAndMerge(captions, translate=False):
         # 循环结束后，把剩下的翻译一下
         translateTempStr = translateTempStr[:-len(splitStr)] 
         translatedStr += translator.translate(translateTempStr)
-        print("({}/{}) {}".format(index+1, len(captionsStrList), translatedStr))
+        print(translatedStr)
         # 把翻译好的东西插入到原来的英文上面
         translatedStr = translatedStr.split('     ')
         for index in range(len(captionsStrList)):
             captionsStrList[index] = translatedStr[index] + '\n' + captionsStrList[index]
-            print(captionsStrList[index])
 
     if translate:
         translateList(captionsStrList)
