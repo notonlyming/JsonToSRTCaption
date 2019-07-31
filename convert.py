@@ -38,6 +38,7 @@ def ParseAndMerge(captions, translate=False):
     传入字幕字典列表合成srt字符串
     '''
     srtStrList = list()
+    captionsStrList = captions['content']
     for index in range(len(captions)):
         thisCaption = captions[index]
         srtStrList.append(str(index+1))
@@ -111,3 +112,4 @@ if __name__ == '__main__':
         for FileName in NoSrtList:
             print('-----------------------正在转换{}-----------------------------'.format(FileName))
             convent(FileName)
+    "\033[1;34m{}\033[0m".format('\nHave a nice day, Bye. ^_^')
