@@ -66,8 +66,8 @@ def ParseAndMerge(captions, translate=False):
         translateTempStr = translateTempStr[:-len(splitStr)] 
         translatedStr += translator.translate(translateTempStr)
         print(translatedStr)
-        # 把翻译好的东西插入到原来的英文上面
-        translatedStr = translatedStr.split('     ')
+        # 把翻译好的东西插入到原来的英文上面（\n 返回的是对应数目的空格）
+        translatedStr = translatedStr.split(' '*len(splitStr))
         for index in range(len(captionsStrList)):
             captionsStrList[index] = translatedStr[index] + '\n' + captionsStrList[index]
 
