@@ -13,4 +13,4 @@ def translate(querystr, to_l="zh", from_l="en"):
     page = str(urllib.request.urlopen(request).read().decode('utf-8'))
     target = page[page.find(flag) + len(flag):]
     target = target.split("<")[0]
-    return target
+    return urllib.parse.unquote(target)

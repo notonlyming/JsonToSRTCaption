@@ -49,25 +49,28 @@ def ParseAndMerge(captions, translate=False):
         # 合并为少于5000字的字符串
         translateTempStr = ''
         translatedStr = ''
+        splitStr = '\n\n\n\n\n'
         for index in range(len(captionsStrList)):
             # 一条一条加入字幕
-            if len(translateTempStr) < 5000:
+            if len(translateTempStr) < 4500:
                 # 字幕没满，加入
-                translateTempStr += captionsStrList[index] + '\n'
-                print("({}/{}) ".format(index+1, len(captionsStrList)))
+                translateTempStr += captionsStrList[index] + splitStr
+                print("({}/{}) ".format(index+1, len(captionsStrList)), end='')
             else:
                 # 字幕已满，翻译
-                translatedStr += translator.translate(translateTempStr) + '\n'
+                translatedStr += translator.translate(translateTempStr)
                 # 清空并把这条加进去
-                translateTempStr = captionsStrList[index] + '\n'
+                translateTempStr = captionsStrList[index] + splitStr
                 print("({}/{}) ".format(index+1, len(captionsStrList)))
         # 循环结束后，把剩下的翻译一下
-        translatedStr += translator.translate(translateTempStr) + '\n'
+        translateTempStr = translateTempStr[:-len(splitStr)] 
+        translatedStr += translator.translate(translateTempStr)
         print("({}/{}) {}".format(index+1, len(captionsStrList), translatedStr))
         # 把翻译好的东西插入到原来的英文上面
-        translatedStr = translatedStr.split('\n')
+        translatedStr = translatedStr.split('     ')
         for index in range(len(captionsStrList)):
             captionsStrList[index] = translatedStr[index] + '\n' + captionsStrList[index]
+            print(captionsStrList[index])
 
     if translate:
         translateList(captionsStrList)
@@ -86,14 +89,14 @@ def ParseAndMerge(captions, translate=False):
     return srtStr
 
 def GetNoSrtList(path):
-    files = os.listdir(path)
+    files = map(lambda x:path + '/' + x, os.listdir(path))
     NoSrtList = list()
     for filename in files:
         if filename.endswith('.json'):
             if not(os.path.exists(filename.replace('.json', '.srt'))):
                 # srt不存在
                 print(filename + '\t[ \033[0;32m{}\033[0m ]'.format('Ready'))
-                NoSrtList.append(filename.replace('.json', '.json'))
+                NoSrtList.append(filename)
             else:
                 # srt已经存在
                 print(filename + '\t[ \033[1;34m{}\033[0m ]'.format('OK'))
@@ -135,7 +138,7 @@ def convent(FileName):
 if __name__ == '__main__':
     #path = os.getcwd()
     path = input('请输入json所在目录：')
-    NoSrtList = map(lambda x:path + '/' + x, GetNoSrtList(path))
+    NoSrtList = GetNoSrtList(path)
     print('-----------------------华丽的分割线-----------------------------')
     if input('continue?(y/n):') == 'y':
         for FileName in NoSrtList:
