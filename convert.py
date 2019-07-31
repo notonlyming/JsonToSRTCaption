@@ -59,9 +59,14 @@ def GetNoSrtList(path):
     files = os.listdir(path)
     NoSrtList = list()
     for filename in files:
-        if filename.endswith('.json') and not(os.path.exists(filename.replace('.json', '.srt'))):
-            print(filename)
-            NoSrtList.append(filename.replace('.json', '.json'))
+        if filename.endswith('.json'):
+            if not(os.path.exists(filename.replace('.json', '.srt'))):
+                # srt不存在
+                print(filename + '\t[\033[0;32m{}\033[0;33m]'.format('Ready'))
+                NoSrtList.append(filename.replace('.json', '.json'))
+            else:
+                # srt已经存在
+                print(filename + '\t[\033[1;34m{}\033[0m]'.format('OK'))
     return NoSrtList
 
 def is_contain_chinese(check_str):
@@ -101,5 +106,8 @@ if __name__ == '__main__':
     #path = os.getcwd()
     path = input('请输入json所在目录：')
     NoSrtList = map(lambda x:path + '/' + x, GetNoSrtList(path))
-    for FileName in NoSrtList:
-        convent(FileName)
+    print('-----------------------华丽的分割线-----------------------------')
+    if input('continue?(y/n):') == 'y':
+        for FileName in NoSrtList:
+            print('-----------------------正在转换{}-----------------------------'.format(FileName))
+            convent(FileName)
