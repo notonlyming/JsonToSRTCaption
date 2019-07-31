@@ -92,11 +92,11 @@ def GetNoSrtList(path):
         if filename.endswith('.json'):
             if not(os.path.exists(filename.replace('.json', '.srt'))):
                 # srt不存在
-                print(filename + '\t[\033[0;32m{}\033[0;33m]'.format('Ready'))
+                print(filename + '\t[ \033[0;32m{}\033[0m ]'.format('Ready'))
                 NoSrtList.append(filename.replace('.json', '.json'))
             else:
                 # srt已经存在
-                print(filename + '\t[\033[1;34m{}\033[0m]'.format('OK'))
+                print(filename + '\t[ \033[1;34m{}\033[0m ]'.format('OK'))
     return NoSrtList
 
 def is_contain_chinese(check_str):
