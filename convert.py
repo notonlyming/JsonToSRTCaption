@@ -38,7 +38,40 @@ def ParseAndMerge(captions, translate=False):
     传入字幕字典列表合成srt字符串
     '''
     srtStrList = list()
-    captionsStrList = captions['content']
+    # 取出所有字幕为列表方便单独处理
+    captionsStrList = list(map(lambda x:x['content'].replace('\n', ' '), captions))
+    
+    def translateList(captionsStrList):
+        '''
+        翻译给定的英文字符串列表，并把翻译结果插入到列表元素的第一行
+        '''
+        print('开始翻译...')
+        # 合并为少于5000字的字符串
+        translateTempStr = ''
+        translatedStr = ''
+        for index in range(len(captionsStrList)):
+            # 一条一条加入字幕
+            if len(translateTempStr) < 5000:
+                # 字幕没满，加入
+                translateTempStr += captionsStrList[index] + '\n'
+                print("({}/{}) ".format(index+1, len(captionsStrList)))
+            else:
+                # 字幕已满，翻译
+                translatedStr += translator.translate(translateTempStr) + '\n'
+                # 清空并把这条加进去
+                translateTempStr = captionsStrList[index] + '\n'
+                print("({}/{}) ".format(index+1, len(captionsStrList)))
+        # 循环结束后，把剩下的翻译一下
+        translatedStr += translator.translate(translateTempStr) + '\n'
+        print("({}/{}) {}".format(index+1, len(captionsStrList), translatedStr))
+        # 把翻译好的东西插入到原来的英文上面
+        translatedStr = translatedStr.split('\n')
+        for index in range(len(captionsStrList)):
+            captionsStrList[index] = translatedStr[index] + '\n' + captionsStrList[index]
+
+    if translate:
+        translateList(captionsStrList)
+
     for index in range(len(captions)):
         thisCaption = captions[index]
         srtStrList.append(str(index+1))
@@ -46,11 +79,7 @@ def ParseAndMerge(captions, translate=False):
             convertMicroSecondToTime(thisCaption['startTime']),
             convertMicroSecondToTime(thisCaption['startTime'] + thisCaption['duration'])
             ))
-        content = thisCaption['content'].replace('\n', ' ')
-        if translate:
-            translatedStr = translator.translate(content)
-            print("({}/{}) {}".format(index+1, len(captions), translatedStr))
-            srtStrList.append(translatedStr)
+        content = captionsStrList[index]
         srtStrList.append(content)
         srtStrList.append('')
     srtStr = '\n'.join(srtStrList)
