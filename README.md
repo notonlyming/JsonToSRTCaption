@@ -39,7 +39,7 @@ sample.json 一个例子。
 这里再多缩一句windows自带终端不支持我代码里的颜色输出。  
 看起来会非常奇怪。  
 所以建议使用linux终端，或在windows下使用一些高级终端。  
-最近微软好像说除了个windows terminal预览版。看起来还不是很成熟。  
+最近微软好像说出了个windows terminal预览版。看起来还不是很成熟。  
 我自己目前使用的是[Fluent Tetminal](https://github.com/felixse/FluentTerminal)，非常漂亮，可以尝试。
 
 许可
