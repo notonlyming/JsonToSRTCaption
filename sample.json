@@ -1,0 +1,550 @@
+{
+    "captions": [
+        {
+            "content": "For this tutorial,",
+            "startTime": 670,
+            "duration": 1113,
+            "startOfParagraph": false
+        },
+        {
+            "content": "I'm using the Audio workspace.",
+            "startTime": 2073,
+            "duration": 1893,
+            "startOfParagraph": false
+        },
+        {
+            "content": "You can reset that workspace",
+            "startTime": 4168,
+            "duration": 1699,
+            "startOfParagraph": false
+        },
+        {
+            "content": "by clicking on the Panel menu\nin the Workspaces panel",
+            "startTime": 6148,
+            "duration": 3671,
+            "startOfParagraph": false
+        },
+        {
+            "content": "and choosing Reset to Saved Layout.",
+            "startTime": 10351,
+            "duration": 2434,
+            "startOfParagraph": false
+        },
+        {
+            "content": "In this sequence,",
+            "startTime": 14249,
+            "duration": 1005,
+            "startOfParagraph": false
+        },
+        {
+            "content": "we have some dialog with\ncontinuous background music.",
+            "startTime": 15367,
+            "duration": 3535,
+            "startOfParagraph": false
+        },
+        {
+            "content": "I'd like the music to\nplay in the background,",
+            "startTime": 19514,
+            "duration": 2573,
+            "startOfParagraph": false
+        },
+        {
+            "content": "but I want it to dip and be quieter\nduring sections of speech.",
+            "startTime": 22460,
+            "duration": 4019,
+            "startOfParagraph": false
+        },
+        {
+            "content": "This is called audio ducking.",
+            "startTime": 26964,
+            "duration": 1898,
+            "startOfParagraph": false
+        },
+        {
+            "content": "Let's listen to a little.",
+            "startTime": 29386,
+            "duration": 1448,
+            "startOfParagraph": false
+        },
+        {
+            "content": "How are you feeling?",
+            "startTime": 32316,
+            "duration": 1008,
+            "startOfParagraph": false
+        },
+        {
+            "content": "A little confused...",
+            "startTime": 36827,
+            "duration": 3211,
+            "startOfParagraph": false
+        },
+        {
+            "content": "First off,",
+            "startTime": 40915,
+            "duration": 1000,
+            "startOfParagraph": false
+        },
+        {
+            "content": "I'm going to set the Audio type for the\ndialogue in the Essential Sound panel.",
+            "startTime": 41945,
+            "duration": 4976,
+            "startOfParagraph": false
+        },
+        {
+            "content": "I'm just going to drag\nacross all of these clips",
+            "startTime": 47607,
+            "duration": 3677,
+            "startOfParagraph": false
+        },
+        {
+            "content": "and click Dialogue (Dialogue) to\nset the Audio type.",
+            "startTime": 52394,
+            "duration": 2835,
+            "startOfParagraph": false
+        },
+        {
+            "content": "I'm also going to use the Loudness\nsection of the Essential Sound panel",
+            "startTime": 55748,
+            "duration": 3581,
+            "startOfParagraph": false
+        },
+        {
+            "content": "to automatically set the dialogue\nto a pretty standard useful level.",
+            "startTime": 59672,
+            "duration": 5445,
+            "startOfParagraph": false
+        },
+        {
+            "content": "I'll click Auto-Match.",
+            "startTime": 65755,
+            "duration": 1271,
+            "startOfParagraph": false
+        },
+        {
+            "content": "Now let's do the\nsame for the music.",
+            "startTime": 68156,
+            "duration": 1897,
+            "startOfParagraph": false
+        },
+        {
+            "content": "But, of course, we'll set\nthe Audio type to Music.",
+            "startTime": 70438,
+            "duration": 2389,
+            "startOfParagraph": false
+        },
+        {
+            "content": "I'm selecting the clip",
+            "startTime": 73228,
+            "duration": 1119,
+            "startOfParagraph": false
+        },
+        {
+            "content": "and choosing Music in\nthe Essential Sound panel.",
+            "startTime": 74724,
+            "duration": 2073,
+            "startOfParagraph": false
+        },
+        {
+            "content": "I'm going to the Loudness section,\nand I'm clicking Auto-Match.",
+            "startTime": 77375,
+            "duration": 3753,
+            "startOfParagraph": false
+        },
+        {
+            "content": "Now that we've defined the types of\naudio that we have in the sequence,",
+            "startTime": 82839,
+            "duration": 4485,
+            "startOfParagraph": false
+        },
+        {
+            "content": "we can use the settings in the Ducking\nsection of the Essential Sound panel.",
+            "startTime": 87805,
+            "duration": 4388,
+            "startOfParagraph": false
+        },
+        {
+            "content": "To have the music get quieter\nevery time there's speech,",
+            "startTime": 92507,
+            "duration": 3685,
+            "startOfParagraph": false
+        },
+        {
+            "content": "I'm going to turn on Ducking.",
+            "startTime": 96896,
+            "duration": 1654,
+            "startOfParagraph": false
+        },
+        {
+            "content": "And let's have a look\nat the options.",
+            "startTime": 99567,
+            "duration": 1632,
+            "startOfParagraph": false
+        },
+        {
+            "content": "First of all, we can\nchoose the types of audio",
+            "startTime": 101654,
+            "duration": 2869,
+            "startOfParagraph": false
+        },
+        {
+            "content": "that the music's going to\nget quieter in response to.",
+            "startTime": 104550,
+            "duration": 2880,
+            "startOfParagraph": false
+        },
+        {
+            "content": "And you can hover the cursor\nover each of these icons",
+            "startTime": 107830,
+            "duration": 3323,
+            "startOfParagraph": false
+        },
+        {
+            "content": "to choose the types of audio that\nyou want to impact the music.",
+            "startTime": 111473,
+            "duration": 4237,
+            "startOfParagraph": false
+        },
+        {
+            "content": "Next up, we've got a\nSensitivity slider.",
+            "startTime": 116903,
+            "duration": 2360,
+            "startOfParagraph": false
+        },
+        {
+            "content": "And this just means you can specify\nhow loud the other audio needs to be",
+            "startTime": 119423,
+            "duration": 4972,
+            "startOfParagraph": false
+        },
+        {
+            "content": "before the audio will duck.",
+            "startTime": 124636,
+            "duration": 1858,
+            "startOfParagraph": false
+        },
+        {
+            "content": "So, for example,",
+            "startTime": 126673,
+            "duration": 1039,
+            "startOfParagraph": false
+        },
+        {
+            "content": "if there is just a quiet background\nsound in amongst the dialogue",
+            "startTime": 127719,
+            "duration": 3113,
+            "startOfParagraph": false
+        },
+        {
+            "content": "that might not trigger\nAudio Ducking.",
+            "startTime": 131105,
+            "duration": 1920,
+            "startOfParagraph": false
+        },
+        {
+            "content": "But if there's full\nblown speech, it will.",
+            "startTime": 133349,
+            "duration": 1773,
+            "startOfParagraph": false
+        },
+        {
+            "content": "Depending on your dialogue audio,",
+            "startTime": 135478,
+            "duration": 2625,
+            "startOfParagraph": false
+        },
+        {
+            "content": "because in this case\nwe are using Dialogue,",
+            "startTime": 138133,
+            "duration": 1871,
+            "startOfParagraph": false
+        },
+        {
+            "content": "you may need to\nadjust this slider",
+            "startTime": 140733,
+            "duration": 2372,
+            "startOfParagraph": false
+        },
+        {
+            "content": "to get more or less response\nin the music level.",
+            "startTime": 143483,
+            "duration": 2905,
+            "startOfParagraph": false
+        },
+        {
+            "content": "Next up, we've got\nthe Reduce By slider.",
+            "startTime": 146921,
+            "duration": 2529,
+            "startOfParagraph": false
+        },
+        {
+            "content": "It's pretty straightforward.",
+            "startTime": 149544,
+            "duration": 1124,
+            "startOfParagraph": false
+        },
+        {
+            "content": "How much do you want the\nmusic to be reduced by",
+            "startTime": 150731,
+            "duration": 2116,
+            "startOfParagraph": false
+        },
+        {
+            "content": "when the ducking occurs?",
+            "startTime": 153077,
+            "duration": 1876,
+            "startOfParagraph": false
+        },
+        {
+            "content": "And then how quickly do you\nwant the audio to get quieter",
+            "startTime": 155376,
+            "duration": 3568,
+            "startOfParagraph": false
+        },
+        {
+            "content": "and get back up to\nfull volume again.",
+            "startTime": 158993,
+            "duration": 1726,
+            "startOfParagraph": false
+        },
+        {
+            "content": "That's how long\nthe Fades will be.",
+            "startTime": 161016,
+            "duration": 1545,
+            "startOfParagraph": false
+        },
+        {
+            "content": "And they're measured\nin milliseconds,",
+            "startTime": 162691,
+            "duration": 1401,
+            "startOfParagraph": false
+        },
+        {
+            "content": "so there are 1,000 of\nmilliseconds in a second.",
+            "startTime": 164117,
+            "duration": 2645,
+            "startOfParagraph": false
+        },
+        {
+            "content": "800 ms means it'll take\njust a little under a second",
+            "startTime": 167145,
+            "duration": 3092,
+            "startOfParagraph": false
+        },
+        {
+            "content": "to get louder and quieter.",
+            "startTime": 170518,
+            "duration": 1567,
+            "startOfParagraph": false
+        },
+        {
+            "content": "With all of these controls,",
+            "startTime": 172976,
+            "duration": 1254,
+            "startOfParagraph": false
+        },
+        {
+            "content": "you can make adjustments by sliding.",
+            "startTime": 174502,
+            "duration": 1757,
+            "startOfParagraph": false
+        },
+        {
+            "content": "And you can reset the control\nby double clicking on it.",
+            "startTime": 176686,
+            "duration": 2545,
+            "startOfParagraph": false
+        },
+        {
+            "content": "So, we're all set, and I'm going\nto click Generate Keyframes.",
+            "startTime": 180413,
+            "duration": 3613,
+            "startOfParagraph": false
+        },
+        {
+            "content": "And right away,",
+            "startTime": 184583,
+            "duration": 1019,
+            "startOfParagraph": false
+        },
+        {
+            "content": "you can see the keyframes have\nbeen added to this music clip.",
+            "startTime": 185612,
+            "duration": 3198,
+            "startOfParagraph": false
+        },
+        {
+            "content": "But actually, the\nsensitivity is set so high",
+            "startTime": 189234,
+            "duration": 3456,
+            "startOfParagraph": false
+        },
+        {
+            "content": "that pretty much the entire clip\nhas had the audio level reduced.",
+            "startTime": 193080,
+            "duration": 3577,
+            "startOfParagraph": false
+        },
+        {
+            "content": "There's just this gap where\nthere's a pause in the dialogue",
+            "startTime": 196961,
+            "duration": 2594,
+            "startOfParagraph": false
+        },
+        {
+            "content": "that we're getting full\nvolume again in the music.",
+            "startTime": 199841,
+            "duration": 2383,
+            "startOfParagraph": false
+        },
+        {
+            "content": "You can manually adjust\nthese keyframes.",
+            "startTime": 202878,
+            "duration": 2695,
+            "startOfParagraph": false
+        },
+        {
+            "content": "They're just the same as any\nother keyframes you might add.",
+            "startTime": 205619,
+            "duration": 2670,
+            "startOfParagraph": false
+        },
+        {
+            "content": "I can hold Control on Windows\nor Command on Mac OS,",
+            "startTime": 208716,
+            "duration": 2863,
+            "startOfParagraph": false
+        },
+        {
+            "content": "and add new keyframes, and\nadjust these as much as I like.",
+            "startTime": 211882,
+            "duration": 3739,
+            "startOfParagraph": false
+        },
+        {
+            "content": "I'll just undo with Control Z or\nCommand Z to remove those extra keyframes.",
+            "startTime": 216458,
+            "duration": 5465,
+            "startOfParagraph": false
+        },
+        {
+            "content": "And let's have a listen.",
+            "startTime": 222563,
+            "duration": 1002,
+            "startOfParagraph": false
+        },
+        {
+            "content": "That's good.",
+            "startTime": 225780,
+            "duration": 1000,
+            "startOfParagraph": false
+        },
+        {
+            "content": "It's not...",
+            "startTime": 229413,
+            "duration": 1494,
+            "startOfParagraph": false
+        },
+        {
+            "content": "Well, it's worked but we definitely\nwant to adjust that sensitivity.",
+            "startTime": 231331,
+            "duration": 3313,
+            "startOfParagraph": false
+        },
+        {
+            "content": "So, I'm going to pull this\nslider down quite a bit.",
+            "startTime": 235784,
+            "duration": 3640,
+            "startOfParagraph": false
+        },
+        {
+            "content": "Let's go for\nsomething like that.",
+            "startTime": 240008,
+            "duration": 1383,
+            "startOfParagraph": false
+        },
+        {
+            "content": "And I'm going to click\nGenerate Keyframes again.",
+            "startTime": 242096,
+            "duration": 2118,
+            "startOfParagraph": false
+        },
+        {
+            "content": "Now we've got a lot more variation.",
+            "startTime": 245960,
+            "duration": 2197,
+            "startOfParagraph": false
+        },
+        {
+            "content": "And you'll notice\nwhen you try this",
+            "startTime": 248743,
+            "duration": 2107,
+            "startOfParagraph": false
+        },
+        {
+            "content": "that any keyframes\nyou add to the clip",
+            "startTime": 251081,
+            "duration": 1923,
+            "startOfParagraph": false
+        },
+        {
+            "content": "before you click Generate Keyframes\nare removed.",
+            "startTime": 253442,
+            "duration": 2961,
+            "startOfParagraph": false
+        },
+        {
+            "content": "They'll be replaced by the new\nkeyframes that are generated",
+            "startTime": 256792,
+            "duration": 3553,
+            "startOfParagraph": false
+        },
+        {
+            "content": "by the Essential Sound panel.",
+            "startTime": 260391,
+            "duration": 1586,
+            "startOfParagraph": false
+        },
+        {
+            "content": "In this instance,",
+            "startTime": 262950,
+            "duration": 1000,
+            "startOfParagraph": false
+        },
+        {
+            "content": "the dialogue is\npretty much constant.",
+            "startTime": 264100,
+            "duration": 2122,
+            "startOfParagraph": false
+        },
+        {
+            "content": "So, we're getting quite quick\nchanges in the audio level",
+            "startTime": 266445,
+            "duration": 2787,
+            "startOfParagraph": false
+        },
+        {
+            "content": "or flat level\nadjustments overall.",
+            "startTime": 269310,
+            "duration": 2180,
+            "startOfParagraph": false
+        },
+        {
+            "content": "You'll find that if you have\nmore gaps in your audio,",
+            "startTime": 272047,
+            "duration": 2456,
+            "startOfParagraph": false
+        },
+        {
+            "content": "it's more pronounced when\nthese key frames are added.",
+            "startTime": 274784,
+            "duration": 2846,
+            "startOfParagraph": false
+        },
+        {
+            "content": "So, that's Automatic Audio Ducking\nin Adobe Premiere Pro CC.",
+            "startTime": 278371,
+            "duration": 3914,
+            "startOfParagraph": false
+        }
+    ]
+}
