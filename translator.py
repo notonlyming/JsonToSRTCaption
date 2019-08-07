@@ -1,7 +1,7 @@
 import urllib.request
 import sys
 
-def translate(querystr, to_l="zh", from_l="en"):
+def translate(querystr, to_l="zh", from_l="auto"):
     querystr = urllib.parse.quote(querystr)
     C_agent = {'User-Agent': "Mozilla/5.0 (X11; Linux x86_64) "
                 "AppleWebKit/537.36 (KHTML, like Gecko) "

@@ -1,6 +1,7 @@
 import translator
 import time
 import os
+import urllib
 
 def convertMicroSecondToTime(microSecond):
     '''
@@ -52,7 +53,8 @@ def ParseAndMerge(captions, translate=False):
         splitStr = '\n\n\n\n\n'
         for index in range(len(captionsStrList)):
             # 一条一条加入字幕
-            if len(translateTempStr) < 4500:
+            # 这里计算的是转义后的字符串是否超限
+            if len(urllib.parse.quote(translateTempStr)) < 4500:
                 # 字幕没满，加入
                 translateTempStr += captionsStrList[index] + splitStr
                 print("({}/{}) ".format(index+1, len(captionsStrList)), end='')
