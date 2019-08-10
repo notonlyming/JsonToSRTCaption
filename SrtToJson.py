@@ -21,6 +21,8 @@ for index in range(len(srtLines) // 4):
     thisIndex = index * 4
     if(srtLines[thisIndex] == str(index)):
         startTime, duration = getStartTimeAndDuration(srtLines[thisIndex+1])
+        if srtLines[thisIndex+2][-1:] in [',', '.']:
+            srtLines[thisIndex+2] = srtLines[thisIndex+2][:-1]
         jsonDict['captions'].append({'content':srtLines[thisIndex+2], 'startTime':startTime, 'duration':duration})
     else:
         print('字幕文件跳行读取失败')
