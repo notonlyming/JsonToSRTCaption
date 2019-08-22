@@ -22,10 +22,12 @@ def convent(fileName):
         srtLines = f.read().split('\n')
 
     jsonDict = {"captions":[]}
-
+    # 取出第一行出来看看是从第几开始
+    initialLineIndex = int(srtLines[0])
     for index in range(len(srtLines) // 4):
+        #thisIndex是指真正的行索引，index则是指第几个字幕的索引
         thisIndex = index * 4
-        if(srtLines[thisIndex] == str(index)):
+        if(srtLines[thisIndex] == str(index + initialLineIndex)):
             startTime, duration = getStartTimeAndDuration(srtLines[thisIndex+1])
             if srtLines[thisIndex+2][-1:] in [',', '.']:
                 srtLines[thisIndex+2] = srtLines[thisIndex+2][:-1]

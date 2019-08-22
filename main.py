@@ -2,8 +2,16 @@
 import convert
 import SrtToJson
 
+message = '''
+-------------------------------------------------
+字幕处理小程序 By Little Ming updated 2019.08.22
+该版本目前在Github闭源，用于其他用途需得到作者许可 ^_^ 
+Github主页：https://github.com/notonlyming
+-------------------------------------------------
+'''
+
 if __name__ == "__main__":
-    print("-----------------------")
+    print(message)
     print('1.转换srt文件为json')
     print('2.转换json文件为srt并翻译(批量操作)')
     print('3.转换英文srt文件为中英srt')
