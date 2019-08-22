@@ -137,7 +137,7 @@ def convent(FileName):
     with open(FileName.replace('.json', '.srt'), 'w', encoding='utf-8') as f:
         f.write(srtStr)
 
-if __name__ == '__main__':
+def main():
     #path = os.getcwd()
     path = input('请输入json所在目录：')
     NoSrtList = GetNoSrtList(path)
@@ -146,4 +146,6 @@ if __name__ == '__main__':
         for FileName in NoSrtList:
             print('-----------------------正在转换{}-----------------------------'.format(FileName))
             convent(FileName)
-    print("\033[1;34m{}\033[0m".format('\nHave a nice day, Bye. ^_^'))
+
+if __name__ == '__main__':
+    main()

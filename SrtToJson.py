@@ -36,8 +36,16 @@ def convent(fileName):
             raise IOError
     return str(jsonDict)
 
-if __name__ == '__main__':
+def main():
+    '''
+    从用户读入文件路径，转换成srt写出。
+    并返回新的json路径
+    '''
     fileName = input('请输入Srt文件名（不含拓展名）：')
     jsonStr = convent(fileName)
     with open(fileName+'.json', 'w', encoding='utf-8') as f:
         f.write(jsonStr)
+    return fileName+'.json'
+
+if __name__ == '__main__':
+    main()
