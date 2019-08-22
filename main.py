@@ -33,5 +33,5 @@ if __name__ == "__main__":
         traceback.print_exc()
         input('程序发生了异常，请查看信息。（回车键退出）')
     finally:
-        # print("\033[1;34m{}\033[0m".format('\nHave a nice day, Bye. ^_^\n'))
-        print('Have a nice day, Bye. ^_^\n')
+        print("\033[1;34m{}\033[0m".format('\nHave a nice day, Bye. ^_^\n'))
+        # print('Have a nice day, Bye. ^_^\n')
