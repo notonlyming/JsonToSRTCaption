@@ -31,8 +31,9 @@ if __name__ == "__main__":
             print('没有匹配到正确的序号')
     except Exception as e:
         traceback.print_exc()
-        input('程序发生了异常, 回车键继续。')
+        input('程序发生了异常，请查看信息。（回车键退出）')
     finally:
         import time
-        print("\033[1;34m{}\033[0m".format('\nHave a nice day, Bye. ^_^\n'))
+        # print("\033[1;34m{}\033[0m".format('\nHave a nice day, Bye. ^_^\n'))
+        print('\nHave a nice day, Bye. ^_^\n')
         time.sleep(2)
