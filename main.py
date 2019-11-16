@@ -6,8 +6,8 @@ import traceback
 message = '''
 -------------------------------------------------
 字幕处理小程序 By Little Ming updated 2019.08.22
-该版本目前在Github闭源，用于其他用途需得到作者许可 ^_^ 
-Github主页：https://github.com/notonlyming
+该版本目前在Github开源^_^ 
+Github项目主页：https://github.com/notonlyming/JsonToSRTCaption
 -------------------------------------------------
 '''
 
