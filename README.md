@@ -1,7 +1,14 @@
 # JsonToSRTCaption
-本程序可实现json批量转srt并翻译
-srt转json
-srt英文字幕转srt中文字幕
+本程序可实现
+* 「特定的」json字幕批量转srt并翻译（详见sample.json）
+* srt转json
+* srt英文字幕转srt中文字幕
+
+注：输入的英文srt必须是单行字幕，因程序采用隔行读取的方法。
+且注意srt末尾不要有多余的空行。
+
+其它格式的json需要自行修改源代码。
+json的读入目前还比较粗暴。但是目前还没时间换成json库。
 
 各个文件的说明
 =============
