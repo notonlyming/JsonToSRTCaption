@@ -46,7 +46,7 @@ def ParseAndMerge(captions, translate=False):
     def translateList(captionsStrList):
         '''
         翻译给定的英文字符串列表，并把翻译结果插入到列表元素的第一行
-        由于百度翻译有6000字节的限制因此要将要翻译的东西分开。
+        由于get有字节的限制因此要将要翻译的东西分开。
         '''
         print('原文分段...')
         counter = 0
@@ -54,7 +54,7 @@ def ParseAndMerge(captions, translate=False):
         partList.append(list()) # 始终会有一部分
         for tmpStr in captionsStrList:
             counter += sys.getsizeof(tmpStr)
-            if counter < 6000:
+            if counter < 2000:
                 if tmpStr != '':
                     partList[-1].append(tmpStr)
             else:
@@ -69,7 +69,7 @@ def ParseAndMerge(captions, translate=False):
             time.sleep(1) # 接口限制，等待 1 s
         
         # 把翻译好的东西插入到原来的英文上面
-        print(resultList)
+        print(len(resultList), resultList)
         for index in range(len(captionsStrList)):
             captionsStrList[index] = resultList[index] + '\n' + captionsStrList[index]
 

@@ -49,7 +49,7 @@ def translate(querystr, to_l="zh", from_l="auto"):
 
             resJson = json.loads(response.text) # 解析返回的文本
             resList = [i['dst'] for i in resJson['trans_result']]
-            print(resList) # 调试输出返回的json
+            # print(resList) # 调试输出返回的json
 
             # 检查是否需要重试
             if not retry:
