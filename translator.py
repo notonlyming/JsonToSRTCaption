@@ -48,16 +48,21 @@ def translate(querystr, to_l="zh", from_l="auto"):
                 raise Exception(f'error res code:{response.status_code}')
 
             resJson = json.loads(response.text) # 解析返回的文本
+            if 'error_code' in resJson.keys():
+                raise Exception(f'翻译API返回出错：{resJson}')
+
             resList = [i['dst'] for i in resJson['trans_result']]
             # print(resList) # 调试输出返回的json
 
             # 检查是否需要重试
             if not retry:
                 break
-        except:
-            traceback.print_stack()
-            print(f'\n出错啦，重试剩余：{3-i}')
+        except Exception as e:
+            print(f'出错啦{e}，重试剩余：{3-i}')
             time.sleep(1.5) # 延迟1.5s
             retry = True
+            if i == 2:
+                traceback.print_stack()
+                raise e
 
     return resList

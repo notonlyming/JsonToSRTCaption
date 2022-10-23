@@ -69,7 +69,7 @@ def ParseAndMerge(captions, translate=False):
             time.sleep(1) # 接口限制，等待 1 s
         
         # 把翻译好的东西插入到原来的英文上面
-        print(len(resultList), resultList)
+        # print(len(resultList), resultList)
         for index in range(len(captionsStrList)):
             captionsStrList[index] = resultList[index] + '\n' + captionsStrList[index]
 
@@ -114,7 +114,7 @@ def is_contain_chinese(check_str):
             return True
     return False
 
-def convent(FileName):
+def convert(FileName):
     '''
     将给定的json文件名转换成对应的srt文件保存在相同目录
     '''
@@ -123,28 +123,29 @@ def convent(FileName):
     print("字幕内容一瞥：" + captions[1]['content'])
     translate = is_contain_chinese(captions[1]['content'])
     if translate:
-        print('判断为包含中文')
+        print('判断为包含中文，不翻译。')
     else:
         print('判断为不包含中文')
-    # 开始转换字幕
-    print('-------------转换字幕开始-------------')
-    srtStr = ParseAndMerge(captions, translate=not(translate))
-    print('-------------转换字幕结束-------------')
-    print("---------生成字幕内容一瞥开始----------")
-    print(srtStr[:400])
-    print("---------生成字幕内容一瞥结束----------")
-    with open(FileName.replace('.json', '.srt'), 'w', encoding='utf-8') as f:
-        f.write(srtStr)
+        # 开始转换字幕
+        print('-------------转换字幕开始-------------')
+        srtStr = ParseAndMerge(captions, translate=not(translate))
+        print('-------------转换字幕结束-------------')
+        print("---------生成字幕内容一瞥开始----------")
+        print(srtStr[:400])
+        print("---------生成字幕内容一瞥结束----------")
+        with open(FileName.replace('.json', '.srt'), 'w', encoding='utf-8') as f:
+            f.write(srtStr)
 
-def main():
+def main(path = None):
     #path = os.getcwd()
-    path = input('请输入json所在目录：')
+    if path == None:
+        path = input('请输入json所在目录：')
     NoSrtList = GetNoSrtList(path)
     print('-----------------------华丽的分割线-----------------------------')
     if input('continue?(y/n):') == 'y':
         for FileName in NoSrtList:
             print('-----------------------正在转换{}-----------------------------'.format(FileName))
-            convent(FileName)
+            convert(FileName)
 
 if __name__ == '__main__':
     main()

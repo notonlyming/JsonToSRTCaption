@@ -2,6 +2,7 @@
 import convert
 import SrtToJson
 import traceback
+import srt_translate
 
 message = '''
 -------------------------------------------------
@@ -16,7 +17,7 @@ if __name__ == "__main__":
         print(message)
         print('1.转换srt文件为json')
         print('2.转换json文件为srt并翻译(批量操作)')
-        print('3.转换英文srt文件为中英srt')
+        print('3.转换英文srt文件为中英srt(批量操作)')
         choise = input('请输入序号：')
         print('-----------------------')
         if choise == '1':
@@ -24,9 +25,7 @@ if __name__ == "__main__":
         elif choise == '2':
             convert.main()
         elif choise == '3':
-            Path = SrtToJson.main()
-            print('-----------------------正在转换{}-----------------------------'.format(Path))
-            convert.convent(Path)
+            srt_translate.main()
         else:
             print('没有匹配到正确的序号')
     except Exception as e:
