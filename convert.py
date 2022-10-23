@@ -67,7 +67,7 @@ def ParseAndMerge(captions, translate=False):
         for i in range(len(partList)):
             resultList.extend(translator.translate('\n'.join(partList[i])))
             print(f'翻译第 {i+1} 部分，共{len(partList)}部分')
-            time.sleep(1) # 接口限制，等待 1 s
+            time.sleep(1/9.5) # 接口限制，高级版QPS为10
         
         # 把翻译好的东西插入到原来的英文上面
         # print(len(resultList), resultList)
