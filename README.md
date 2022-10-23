@@ -41,9 +41,10 @@ json的读入目前还比较粗暴。但是目前还没时间换成json库。
 
 地址：[点击此处](http://api.fanyi.baidu.com/api/trans/product/apichoose)
 
-注意，百度翻译现在需要实名认证才能具有较高的可用度。请实名认证后切换为高级版，否则需要修改程序convert中的判断阈值（标准版为1000字符每次请求）。
+注意，百度翻译现在需要实名认证才能具有较高的可用度。[权益说明](http://api.fanyi.baidu.com/doc/8)
+请实名认证后切换为高级版，否则需要修改程序convert中的判断阈值（标准版为1000字符每次请求）。
 
-将api信息填入translateApi.json。参见translateApi_sample.json。
+将api信息[管理百度翻译API](http://api.fanyi.baidu.com/api/trans/product/desktop)填入translateApi.json。参见translateApi_sample.json。
 
 终端输入： `python -u mian.py`  
 有时输出多了会攒一段时间等缓存满了再输出。这就会造成输出不及时，没有反馈。
